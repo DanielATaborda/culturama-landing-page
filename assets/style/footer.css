@@ -1,0 +1,31 @@
+.rodape{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 15px;
+    row-gap: 15px;
+}
+.rodape__logo{
+    height: 40%;
+    align-self: flex-end;
+}
+
+@media (min-width:720px){
+    .rodape {
+        grid-template-columns: repeat(4,1fr);
+    }
+
+    .rodape__logo{
+        grid-area: 2/4/3/5;
+    }
+}
+
+@media (min-width:1440px){
+    .rodape{
+        grid-template-columns: repeat(6,1fr);
+        grid-template-rows: none;
+    }
+
+    .rodape__logo{
+        grid-area: 1/6/2/7;
+    }
+}
